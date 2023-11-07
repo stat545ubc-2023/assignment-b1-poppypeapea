@@ -1,7 +1,5 @@
 ---
 title: "assignment-b1"
-author: "Poppy"
-date: "2023-11-06"
 output: github_document
 ---
 
@@ -71,7 +69,7 @@ plot_distribution(mpg, "hwy")
 ```
 
 Example of incorrect usage:
-```{r}
+```{r, error = TRUE }
 # Improper Usage: Non-existent column
 plot_distribution(mpg, "highway_mileage")
 # Error: 'column' should be a single character string naming the numeric column.
@@ -86,7 +84,7 @@ plot_distribution(mpg, "hwy", bins = -5)
 ## Exercise 4: Test the Function
 
 Creating tests for the function to verify its correct functionality and handling of errors:
-```{r}
+```{r, error = TRUE }
 test_that("Test plot_distribution function", {
   # Correct Usage
   expect_is(plot_distribution(mpg, "hwy"), "ggplot")
